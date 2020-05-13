@@ -34,20 +34,31 @@ data.forEach(function(ufosightings) {
     //});
 //});
 
-var button = d3.select("#button");
+//select the button
+var button = d3.select("#filter-btn");
 
-var form = d3.select("#datetime");
+//select the form
+var form = d3.select("#form");
 
+//create event handlers
 button.on("click", runEnter);
 form.on("submit", runEnter);
 
+//complete the event handler function for form
 function runEnter() {
+    //prevent page from refreshing
     d3.event.preventDefault();
 
-    var inputElement = d3.select("datetime");
+    //select input element
+    var InputElement = d3.select("#datetime");
 
-    var inputValue = inputElement.property("value");
+    //value property
+    var inputValue = InputElement.property("value");
 
     console.log(inputValue);
-    console.log(date);
-}
+    console.log(tableData);
+
+    //filtered data
+    var filteredData = tableData.filter(date => date.datetime === inputValue);
+    console.log(filteredData);
+};
