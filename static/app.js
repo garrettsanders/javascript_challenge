@@ -30,7 +30,7 @@ data.forEach(function(ufosightings) {
 var button = d3.select("#filter-btn");
 
 //select the form
-var form = d3.select("#form");
+var form = d3.select("#form")
 
 //create event handlers
 button.on("click", runEnter);
@@ -54,3 +54,4 @@ function runEnter() {
     var filteredData = tableData.filter(date => date.datetime === inputValue);
     console.log(filteredData);
 };
+
