@@ -26,14 +26,6 @@ data.forEach(function(ufosightings) {
     });
 });
 
-//data.forEach((ufosightings) => {
-    //var row = tbody.append("tr");
-    //Object.entries(ufosightings).forEach(([key.value]) => {
-        //var cell = row.append("td");
-        //cell.text(value);
-    //});
-//});
-
 //select the button
 var button = d3.select("#filter-btn");
 
